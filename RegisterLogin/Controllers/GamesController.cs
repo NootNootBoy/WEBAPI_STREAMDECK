@@ -5,10 +5,13 @@ using RegisterLogin.Models;
 using IGDB;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RegisterLogin.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Game = IGDB.Models.Game;
 
 namespace RegisterLogin.Controller
 {
+    [Authorize(Roles = UserRoles.Streameur)]
     [Route("api/[controller]")]
     public class GamesController : Microsoft.AspNetCore.Mvc.Controller
     {

@@ -1,0 +1,36 @@
+Register User :
+
+http://localhost:65017/api/authenticate/register
+
+{
+    "username" : "nico123",
+    "email" : "nico123@gmail.com",
+    "password" : "Password@123"
+}
+
+Register Admin :
+
+http://localhost:65017/api/authenticate/register-streameur
+
+{
+    "username" : "nico1234",
+    "email" : "nico1234@gmail.com",
+    "password" : "Password@123"
+}
+
+Login User / Admin :
+
+http://localhost:65017/api/authenticate/login
+
+{
+    "username" : "nico1234",
+    "email" : "nico1234@gmail.com",
+    "password" : "Password@123"
+}
+
+Tu reçois un token, que tu insère sur JWT : https://jwt.io pour vérifier si tu es rôles Streameur ou User
+Ensuite Postman -> Authorization -> Bearer Token -> Insère le token -> GET : http://localhost:65017/api/games -> Success
+
+-----------------------------
+
+API CRUD 
