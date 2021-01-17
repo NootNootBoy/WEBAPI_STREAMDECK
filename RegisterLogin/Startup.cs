@@ -15,6 +15,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RegisterLogin.Authentication;
+using RegisterLogin.Models;
+
 namespace RegisterLogin
 {
     public class Startup
@@ -33,6 +35,7 @@ namespace RegisterLogin
 
             // For Entity Framework  
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
+            services.AddDbContext<Micro_API_DBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Micromania")));
 
             // For Identity  
             services.AddIdentity<ApplicationUser, IdentityRole>()
